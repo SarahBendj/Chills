@@ -5,7 +5,7 @@ const app = express();
 const port = process.env.PORT || 3001;
 const error = require('./app/errorHandler/errorCases')
 
-app.use(cors());
+app.use(cors())
 
 //routers bloc
 const routeBase = './app/routers'

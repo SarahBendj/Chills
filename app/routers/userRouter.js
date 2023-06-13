@@ -18,6 +18,7 @@ const isAdmin= require("../services/middleware/isAdmin");
 //router.get('/users/info',authentificate ,isAdmin,/*superadmin*
 //router.get('/users',authentificate,isAdmin,appUserController.showAll)
 //*/
+router.get('/users', deleteOrModifyProfileController.showAll)
 
 
 //*Members

@@ -7,7 +7,9 @@ const Extra = require('./Extra');
 const Warning = require('./Warning');
 const Technic = require('./Technic');
 const Appointement = require('./Appointement');
+const BodyZone = require('./BodyZone')
+const Category = require('./Category')
 
  
 
-module.exports = { Core ,Header, Discount , Services, AppUser , Extra , Warning, Technic, Appointement}
+module.exports = { Core ,Header, Discount ,BodyZone, Services, AppUser , Extra , Warning, Technic, Appointement , Category}

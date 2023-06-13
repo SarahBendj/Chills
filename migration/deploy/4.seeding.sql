@@ -3,8 +3,8 @@
 BEGIN;
 
 INSERT INTO discount("name", "sale") VALUES 
-    ('relaxstaff', 15),
-    ('Eymric', 5),
+    ('relax10', 15),
+    ('mode15', 5),
     ('flan', 15);
 
 INSERT INTO header("name") VALUES 
@@ -33,13 +33,46 @@ INSERT INTO technic("name") VALUES
 ('sand therap'),
 ('just oil');
 
+INSERT INTO body_zone("name") VALUES 
+('face'),
+('arms'),
+('head'),
+('hair'),
+('back'),
+('all body'),
+('thighs'),
+('hands'),
+('feet'),
+('chest & belly'),
+('legs');
 
 
-INSERT INTO services ("name", "description","price","img") VALUES
- ('Instant relax', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',69, 'https://cdn.pixabay.com/photo/2023/05/19/10/15/parrot-8004146_1280.jpg'),
- ('Day relax', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',99,'https://cdn.pixabay.com/photo/2022/09/02/13/02/boho-7427541_1280.jpg'),
- ('Week relax', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',299,'https://cdn.pixabay.com/photo/2022/09/02/13/02/boho-7427541_1280.jpg');
+INSERT INTO category ("name" , "img") VALUES 
+('SAUNA & HAMMAM','https://images.pexels.com/photos/8284382/pexels-photo-8284382.jpeg' ),
+('MASSAGE' ,'https://images.pexels.com/photos/3997994/pexels-photo-3997994.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+('BODY CARE','https://images.pexels.com/photos/4155011/pexels-photo-4155011.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+('RELAX THERAPY' , 'https://images.pexels.com/photos/6663365/pexels-photo-6663365.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+('BATHING' ,'https://images.pexels.com/photos/3865748/pexels-photo-3865748.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+('Nurrish' ,'https://images.pexels.com/photos/6683042/pexels-photo-6683042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'),
+('Nails' , 'https://images.pexels.com/photos/3997379/pexels-photo-3997379.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
 
+INSERT INTO services ("name", "description","price","category_id") VALUES
+ ('Smooth', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',69,1),
+ ('Herbal Medicine', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',99,4),
+ ('Instant relax', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',69,1),
+ ('Healthy time', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',99,3),
+ ('Vitamin me', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',299,4),
+ ('Peaceful moment', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',69,5),
+ ('nurrish & heal', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',99,5),
+ ('Hydrated body', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',299,5),
+ ('Ultimate body', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',399,3),
+ ('Divine hands', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',399,7),
+ ('Toned', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',299,6),
+ ('Hotty bath', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',399,1),
+ ('Acupuncture', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',399,4),
+ ('Medical massage', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',99,2),
+ ('Classic massage', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vehicula tellus in dui eleifend tincidunt. Aliquam aliquam varius mi, vel blandit enim lacinia sit amet. Mauris dignissim urna at nisi pharetra, at iaculis massa consequat. Morbi gravida nisi eu erat dapibus, nec consectetur lacus ullamcorper. Donec vitae nisi eu',299,2);
+  
   
 
 INSERT INTO app_user ("firstname", "lastname", "password", "email", "identificant", "role" )VALUES

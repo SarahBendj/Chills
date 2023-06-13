@@ -19,10 +19,7 @@ const loginController = {
         if (match) {
            
           //if both condition [email & Password] : VALID => generates a TOKEN
-          const token = jwt.sign({id: user.id.toString(), identificant : user.identificant, role : user.role}, process.env.ACCESS_TOKEN_SECRET , { expiresIn : 60*60*12});
-
-          //let sToken = jwt.sign({foo: 'bar'}, 'secret', { expiresIn: 1 });
-          // redirection to DASHBORD
+          const token = jwt.sign({id: user.id.toString(), identificant : user.identificant, role : user.role}, process.env.ACCESS_TOKEN_SECRET , { expiresIn : 12});
           
           return response.status(200).json({token})
          // response.redirect("/");

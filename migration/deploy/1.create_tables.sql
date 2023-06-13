@@ -15,13 +15,26 @@ CREATE TABLE  header (
     name text not null
     
 );
+CREATE TABLE  body_zone ( 
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    name text not null
+    
+);
+CREATE TABLE  category ( 
+    id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    img text not null,
+    name text not null
+    
+);
+
 
 CREATE TABLE  services ( 
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     name text not null,
     img text,
     description text not null,
-    price INT not null
+    price INT not null,
+    category_id int references category(id)
 );
 
 CREATE TABLE  periods ( 
@@ -55,17 +68,15 @@ CREATE TABLE technic (
 
 CREATE TABLE  appointement ( 
     id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    extra  boolean,
-    discount boolean,
     discount_sale text,
     RDV_date TIMESTAMPTZ ,
     createdAt TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     description text default 'RAS',
     app_user_id int references app_user(id),
+    body_zone_id int references body_zone(id),
     services_id  int references services(id),
-    periods_id int references periods(id),
     extra_id int references extra(id),
-    technic  int references technic(id)
+    technic_id  int references technic(id)
 );
 
 

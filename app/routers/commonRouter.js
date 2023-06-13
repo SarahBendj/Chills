@@ -5,6 +5,9 @@ const technicController = require("../controllers/technicController")
 const extraController = require("../controllers/extraController");
 const discountController = require("../controllers/discountController");
 const headerController = require("../controllers/headercontroller");
+const bodyZoneController = require("../controllers/bodyZoneController");
+const CategoryController = require("../controllers/categoryController")
+
 //validation dataMethod
 const validate = require("../services/validate/method");
 const schema = require("../services/validate/schemas");
@@ -14,9 +17,19 @@ const isAdmin= require("../services/middleware/isAdmin");
 const router = express.Router();
 
 //*services
-router.get("/services", servicesController.showAll);
-router.get("/services/images", servicesController.showImages);
+router.get("/services/images", servicesController.showAll);
+router.get("/services", servicesController.showImages);
+router.get("/services/:id", servicesController.showOneService)
 router.post("/services",servicesController.createOne);
+
+
+//*Category
+
+router.get("/categories", CategoryController.showAll);
+router.get("/categories/:id", CategoryController.showOneCategory);
+//*BodyZOne
+
+router.get("/bodyzones", bodyZoneController.showAll);
 
 //*discount
 router.get("/discounts" , discountController.showAll);

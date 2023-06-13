@@ -27,6 +27,20 @@ const goodsController = {
       const goods = await Services.findAll();
      response.json(goods)
   },
+  async showOneService(request, response , next ) {
+    const id = parseInt(request.params.id,10)
+    try {
+      const goods = await Services.findOne(id);
+      response.json(goods)
+
+    }catch(error){
+
+      next(new ApiError(error, error.status));
+  }
+
+
+    
+},
   async createOne(request, response, next) {
     const { img }= request.body
    

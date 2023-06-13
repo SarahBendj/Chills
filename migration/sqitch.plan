@@ -1,7 +1,7 @@
 %syntax-version=1.0.0
 %project=chills
 
-1.create_tables 2023-05-25T13:07:27Z Etudiant O'clock <student@teleporter> # creation of tables
-2.setting_dates 2023-05-25T13:07:28Z Etudiant O'clock <student@teleporter> # adding timestamp columns into supplier & app_user tables
-3.identificant_column 2023-05-25T13:07:29Z Etudiant O'clock <student@teleporter> # adding new column that's represent the identificant
-4.seeding 2023-05-25T13:07:30Z Etudiant O'clock <student@teleporter> # seeding data into tables
+1.create_tables 2023-06-13T09:44:29Z Etudiant O'clock <student@teleporter> # creation of tables
+2.setting_dates 2023-06-13T09:44:30Z Etudiant O'clock <student@teleporter> # adding timestamp columns into supplier & app_user tables
+3.identificant_column 2023-06-13T09:44:30Z Etudiant O'clock <student@teleporter> # adding new column that's represent the identificant
+4.seeding 2023-06-13T09:44:30Z Etudiant O'clock <student@teleporter> # seeding data into tables
